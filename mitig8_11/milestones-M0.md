@@ -47,13 +47,16 @@ Milestone M0 focuses on establishing the foundation for the Mitig8 platform deve
 - Confirmed no package.json, Dockerfile, or docker-compose.yml files exist yet
 - Documented expected development commands in arch-status.md
 
-### M0-T4: Architecture audit & log mapping
-**Status**: Pending
+### M0-T4: Architecture audit & log mapping ✓
+**Status**: Completed
 **Description**: Audit modules vs SOW and map CloudWatch log groups (read-only).
-**Planned Actions**:
-- Audit existing modules against SOW requirements
-- Map CloudWatch log groups
-- Document architecture findings
+**Actions Taken**:
+- Audited expected modules based on orchestrator.json requirements
+- Mapped all existing CloudWatch log groups in UAT environment
+- Documented 18 CloudWatch log groups across API Gateway, ECS, Lambda, and RDS
+- Identified key Lambda functions for core business operations
+- Documented expected frontend and backend modules
+- Updated arch-status.md with comprehensive architecture audit
 
 ### M0-T5: Baseline error categories
 **Status**: Pending

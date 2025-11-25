@@ -73,11 +73,13 @@ Mitig8_Client_WebApp/
 - Technology: Park UI + Panda CSS
 - Framework: To be determined
 - Status: Not yet created
+- Expected Modules: Survey, Quotes, Valuations, Risk, Reports, Documents, Notifications, Admin Console
 
 ### Backend (api/)
 - Technology: AWS Lambda functions
 - Database: PostgreSQL via RDS Proxy
 - Status: Not yet created
+- Expected Modules: Authentication, Survey Management, Quote Generation, Risk Assessment, Report Generation, Document Management, Notifications
 
 ### Infrastructure (infrastructure/terraform/)
 - Cloud Provider: AWS
@@ -92,6 +94,40 @@ Mitig8_Client_WebApp/
   - S3 backend for Terraform state
   - CI/CD bound to UAT/PROD branches
 - Status: Not yet created
+
+## CloudWatch Log Groups (Existing UAT Environment)
+
+### API Gateway
+- `/aws/apigateway/mitig8-uat` - API Gateway logs
+
+### ECS Services
+- `/aws/ecs/containerinsights/mitig8-ecs-cluster/performance` - ECS performance metrics
+- `/aws/ecs/containerinsights/mitig8-uat-cluster/performance` - UAT ECS performance metrics
+- `/ecs/mitig8-api` - API service logs
+- `/ecs/mitig8-uat` - UAT service logs
+- `ecs-mitig8-api` - API service logs (alternative)
+
+### Lambda Functions
+- `/aws/lambda/mitig8-uat-api-v1` - API v1 Lambda
+- `/aws/lambda/mitig8-uat-check-password-expiry` - Password expiry check
+- `/aws/lambda/mitig8-uat-check-session-timeouts` - Session timeout check
+- `/aws/lambda/mitig8-uat-check-sla-breaches` - SLA breach check
+- `/aws/lambda/mitig8-uat-geocode-address` - Address geocoding
+- `/aws/lambda/mitig8-uat-lambda-health` - Health check
+- `/aws/lambda/mitig8-uat-migration-runner` - Database migrations
+- `/aws/lambda/mitig8-uat-send-pi-reminders` - Professional indemnity reminders
+- `/aws/lambda/mitig8-uat-send-query-notification` - Query notifications
+- `/aws/lambda/mitig8-uat-survey-ai-review` - Survey AI review
+
+### Database
+- `/aws/rds/proxy/mitig8-uat-rds-proxy` - RDS Proxy logs
+
+### Notes
+- Existing UAT environment shows comprehensive Lambda-based architecture
+- Multiple specialized Lambda functions for different business operations
+- ECS clusters for containerized services
+- RDS Proxy for database connectivity
+- All log groups have retention policies (1-30 days)
 
 ## Milestone Progress
 
