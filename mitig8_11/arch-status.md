@@ -29,7 +29,22 @@ Mitig8_Client_WebApp/
 
 ## AWS Infrastructure (Terraform)
 
-Not yet confirmed - will be verified in M0-T2.
+### AWS CLI Status
+- AWS CLI Version: 2.30.7
+- Authentication: Configured and working
+- AWS Account: 879937386092
+- IAM Identity: root
+
+### Terraform Status
+- Terraform Version: 1.5.7 (out of date - latest is 1.14.0)
+- Infrastructure Directory: Not yet created (expected at infrastructure/terraform/)
+- Terraform Backend: Not yet configured
+- S3 State Bucket: Not yet confirmed
+
+### Notes
+- AWS CLI is properly installed and authenticated
+- Terraform is installed but should be updated to latest version
+- Infrastructure directory and Terraform backend will be created in future milestones
 
 ## Application Architecture
 

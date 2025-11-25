@@ -25,14 +25,15 @@ Milestone M0 focuses on establishing the foundation for the Mitig8 platform deve
 - Created `mitig8_11/milestones-M0.md` to track M0 progress
 - Confirmed repository structure (currently only mitig8_11/ exists)
 
-### M0-T2: AWS CLI & Terraform connectivity
-**Status**: Pending
+### M0-T2: AWS CLI & Terraform connectivity ✓
+**Status**: Completed
 **Description**: Check AWS CLI, identity, S3 backend and Terraform backend (read-only).
-**Planned Actions**:
-- Verify AWS CLI installation and authentication
-- Check Terraform installation
-- Verify S3 backend for Terraform state
-- Confirm Terraform backend connectivity (read-only)
+**Actions Taken**:
+- Verified AWS CLI installation (version 2.30.7)
+- Confirmed AWS CLI authentication (Account: 879937386092)
+- Checked Terraform installation (version 1.5.7 - should be updated to 1.14.0)
+- Noted that infrastructure/terraform/ directory doesn't exist yet
+- Documented findings in arch-status.md
 
 ### M0-T3: Local dev & Docker baseline
 **Status**: Pending
