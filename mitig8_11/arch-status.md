@@ -37,6 +37,14 @@ mitig8_client_webapp/
 - ❌ S3 backend not yet verified (infrastructure/terraform/ not yet created)
 - ❌ Infrastructure not yet created
 
+### Local Development & Docker
+- ✅ Docker installed (v28.5.2)
+- ✅ Docker Compose installed (v2.40.3-desktop.1)
+- ❌ client/ directory not yet created (expected commands: pnpm -C client install|dev|build|lint|test)
+- ❌ api/ directory not yet created (expected commands: pnpm -C api install|start|test)
+- ❌ Dockerfile not yet created
+- ❌ docker-compose.yml not yet created
+
 ### Documentation
 - ✅ README.md created at repo root
 - ✅ Mitig8_11 orchestration docs in place

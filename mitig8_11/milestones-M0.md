@@ -36,9 +36,16 @@ Milestone M0 focuses on setting up the foundational infrastructure for the Mitig
 - Verified Terraform installation (v1.5.7)
 - Noted that Terraform backend and S3 backend cannot be verified yet as infrastructure/terraform/ directory does not exist (this is expected for a NEW repo)
 
-### M0-T3: Local dev & Docker baseline
-**Status**: Pending
+### M0-T3: Local dev & Docker baseline ✅
+**Status**: Completed
 **Description**: Discover and document local dev and Docker commands (no code changes).
+
+**Actions Completed**:
+- Verified Docker installation (v28.5.2)
+- Verified Docker Compose installation (v2.40.3-desktop.1)
+- Documented expected local development commands for client/ and api/ directories (based on orchestrator.json)
+- Noted that client/ and api/ directories do not exist yet (this is expected for a NEW repo)
+- Noted that Dockerfile and docker-compose.yml do not exist yet (will be created in M1)
 
 ### M0-T4: Architecture audit & log mapping
 **Status**: Pending
