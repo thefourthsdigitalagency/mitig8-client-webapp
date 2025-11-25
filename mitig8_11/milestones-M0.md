@@ -35,13 +35,17 @@ Milestone M0 focuses on establishing the foundation for the Mitig8 platform deve
 - Noted that infrastructure/terraform/ directory doesn't exist yet
 - Documented findings in arch-status.md
 
-### M0-T3: Local dev & Docker baseline
-**Status**: Pending
+### M0-T3: Local dev & Docker baseline ✓
+**Status**: Completed
 **Description**: Discover and document local dev and Docker commands (no code changes).
-**Planned Actions**:
-- Document local development commands
-- Document Docker setup and commands
-- Create baseline documentation for development environment
+**Actions Taken**:
+- Verified Docker installation (version 28.5.2)
+- Verified Docker Compose installation (version v2.40.3-desktop.1)
+- Verified Node.js installation (version v20.19.4)
+- Verified npm installation (version 10.8.2)
+- Verified pnpm installation (version 9.15.4)
+- Confirmed no package.json, Dockerfile, or docker-compose.yml files exist yet
+- Documented expected development commands in arch-status.md
 
 ### M0-T4: Architecture audit & log mapping
 **Status**: Pending

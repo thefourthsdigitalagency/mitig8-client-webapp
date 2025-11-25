@@ -46,6 +46,27 @@ Mitig8_Client_WebApp/
 - Terraform is installed but should be updated to latest version
 - Infrastructure directory and Terraform backend will be created in future milestones
 
+## Local Development Environment
+
+### Docker Status
+- Docker Version: 28.5.2
+- Docker Compose Version: v2.40.3-desktop.1
+- Status: Installed and ready
+- Dockerfile: Not yet created
+- docker-compose.yml: Not yet created
+
+### Node.js Status
+- Node.js Version: v20.19.4
+- npm Version: 10.8.2
+- pnpm Version: 9.15.4
+- Status: All installed and ready
+- package.json: Not yet created
+
+### Development Commands
+- Frontend: To be determined (expected: pnpm -C client install|dev|build|lint|test)
+- Backend: To be determined (expected: pnpm -C api install|start|test)
+- Docker: To be determined (expected: docker-compose up/down)
+
 ## Application Architecture
 
 ### Frontend (client/)
