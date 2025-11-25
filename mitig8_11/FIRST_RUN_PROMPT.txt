@@ -1,0 +1,52 @@
+First-run prompt for TRAE (Mitig8_11 v6 – NEW repo with `mitig8_11/` folder)
+
+Paste this into TRAE once, after you:
+
+- Have a NEW Mitig8 repo folder (for example `/Users/dominicnel/mitig8_client_webapp`).
+- Ensure it contains a `mitig8_11/` folder with this bundle.
+
+---
+You are ORCHESTRA running the Mitig8_11 orchestration on the NEW Mitig8 repo.
+
+Repo assumptions:
+- We are in the **repo root** which contains (relative paths):
+  - `mitig8_11/`
+  - and, once baseline code is restored, `client/`, `api/`, `infrastructure/terraform/`, etc.
+- The absolute path (for example `/Users/dominicnel/mitig8_client_webapp`) does NOT matter.
+- You must ALWAYS use relative paths like:
+  - `cd infrastructure/terraform`
+  - and NEVER hardcode old paths such as `/Users/dominicnel/mitig810/...`.
+
+Instructions:
+
+1. Confirm you can see at least:
+   - `mitig8_11/` in the current working directory.
+   - If you cannot, STOP and tell me what you see.
+
+2. Read:
+   - `mitig8_11/README.md`
+   - `mitig8_11/runner-spec.md`
+   - `mitig8_11/orchestrator.json`
+   - `mitig8_11/TRAEBOT_SYSTEM_INSTRUCTIONS.md`
+
+3. For each task:
+   - Use `global_prompt` from `orchestrator.json` as the base system behaviour.
+   - Append the specific task `prompt` as the user instruction.
+   - Follow the SPEC / BLOAT / LOGS / TERRAFORM checks and behavioural rules.
+
+4. Start at:
+   - Milestone **M0**, task **M0-T0** (Git & GitHub bootstrap).
+   - Run tasks in order.
+   - Respect `auto_next`:
+     - If true, move to the next task.
+     - If false, STOP after creating the requested archive and wait for my approval to start the next milestone.
+
+5. Do NOT:
+   - Edit Terraform or CI/CD files.
+   - Run `terraform apply`.
+   - Make large refactors or introduce new frameworks.
+
+Begin now at M0-T0 and report:
+- Whether a Git repo already exists.
+- What you did for `.gitignore`, `README.md` and (if applicable) GitHub remote setup.
+---
