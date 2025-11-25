@@ -96,9 +96,15 @@ Milestone M0 focuses on setting up the foundational infrastructure for the Mitig
 - Noted that no application logs are available yet (client/ and api/ directories not yet created)
 - Noted that no CloudWatch log groups are available yet (infrastructure not yet created)
 
-### M0-T6: Archive M0 snapshot
-**Status**: Pending
+### M0-T6: Archive M0 snapshot ✅
+**Status**: Completed
 **Description**: Archive repo after M0 and wait for approval.
+
+**Actions Completed**:
+- Committed M0-T4 and M0-T5 changes to Git
+- Pushed changes to GitHub remote repository
+- All M0 tasks (M0-T0 through M0-T5) now completed
+- Repository ready for M1 milestone (pending approval)
 
 ## Repository Structure
 
