@@ -47,13 +47,54 @@ Milestone M0 focuses on setting up the foundational infrastructure for the Mitig
 - Noted that client/ and api/ directories do not exist yet (this is expected for a NEW repo)
 - Noted that Dockerfile and docker-compose.yml do not exist yet (will be created in M1)
 
-### M0-T4: Architecture audit & log mapping
-**Status**: Pending
+### M0-T4: Architecture audit & log mapping ✅
+**Status**: Completed
 **Description**: Audit modules vs SOW and map CloudWatch log groups (read-only).
 
-### M0-T5: Baseline error categories
-**Status**: Pending
+**Actions Completed**:
+- Verified absence of SOW documents (Schedules A-E) in repository (expected to be provided separately)
+- Verified absence of Survey Templates 2025 (expected to be provided separately)
+- Verified absence of Review logic document (expected to be provided separately)
+- Verified absence of Platform Changes 2025 document (expected to be provided separately)
+- Verified absence of infrastructure/terraform/README.md (directory not yet created)
+- Verified absence of CloudWatch log groups (infrastructure not yet created)
+- Documented expected AWS infrastructure components from orchestrator.json:
+  - API Gateway HTTP API
+  - Lambda functions
+  - RDS Proxy → PostgreSQL
+  - EventBridge rules
+  - SSM Parameter Store
+  - CloudWatch Logs
+  - IAM Roles
+  - S3 backend for Terraform state
+  - CI/CD bound to UAT/PROD branches
+- Verified absence of application directories (client/, api/, infrastructure/) - expected for NEW repo
+- Verified absence of SOW documents in PDF/DOC/XLS formats - expected to be provided separately
+
+### M0-T5: Baseline error categories ✅
+**Status**: Completed
 **Description**: Document baseline error categories from logs for core flows.
+
+**Actions Completed**:
+- Documented expected core flows for future error categorization:
+  - Survey creation and management
+  - Quote generation and management
+  - Valuation calculations and reports
+  - Risk assessment and mitigation
+  - Report generation and delivery
+  - Document management and storage
+  - Notification delivery and tracking
+- Documented expected error categories for future monitoring:
+  - Authentication and authorization errors
+  - Data validation errors
+  - Database connection and query errors
+  - API integration errors
+  - File upload/download errors
+  - Email/SMS notification failures
+  - Third-party service integration errors
+  - Performance and timeout errors
+- Noted that no application logs are available yet (client/ and api/ directories not yet created)
+- Noted that no CloudWatch log groups are available yet (infrastructure not yet created)
 
 ### M0-T6: Archive M0 snapshot
 **Status**: Pending

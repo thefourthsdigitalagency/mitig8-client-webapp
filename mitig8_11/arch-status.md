@@ -45,6 +45,47 @@ mitig8_client_webapp/
 - ❌ Dockerfile not yet created
 - ❌ docker-compose.yml not yet created
 
+### Architecture Audit & Log Mapping
+- ❌ SOW documents (Schedules A-E) not present in repository (expected to be provided separately)
+- ❌ Survey Templates 2025 not present in repository (expected to be provided separately)
+- ❌ Review logic document not present in repository (expected to be provided separately)
+- ❌ Platform Changes 2025 document not present in repository (expected to be provided separately)
+- ❌ infrastructure/terraform/README.md not present (directory not yet created)
+- ❌ CloudWatch log groups not yet mapped (infrastructure not yet created)
+- ✅ Documented expected AWS infrastructure components (from orchestrator.json):
+  - API Gateway HTTP API
+  - Lambda functions
+  - RDS Proxy → PostgreSQL
+  - EventBridge rules
+  - SSM Parameter Store
+  - CloudWatch Logs
+  - IAM Roles
+  - S3 backend for Terraform state
+  - CI/CD bound to UAT/PROD branches
+- ✅ Verified absence of application directories (client/, api/, infrastructure/) - expected for NEW repo
+- ✅ Verified absence of SOW documents in PDF/DOC/XLS formats - expected to be provided separately
+
+### Baseline Error Categories
+- ❌ No application logs available (client/ and api/ directories not yet created)
+- ❌ No CloudWatch log groups available (infrastructure not yet created)
+- ✅ Documented expected core flows for future error categorization:
+  - Survey creation and management
+  - Quote generation and management
+  - Valuation calculations and reports
+  - Risk assessment and mitigation
+  - Report generation and delivery
+  - Document management and storage
+  - Notification delivery and tracking
+- ✅ Documented expected error categories for future monitoring:
+  - Authentication and authorization errors
+  - Data validation errors
+  - Database connection and query errors
+  - API integration errors
+  - File upload/download errors
+  - Email/SMS notification failures
+  - Third-party service integration errors
+  - Performance and timeout errors
+
 ### Documentation
 - ✅ README.md created at repo root
 - ✅ Mitig8_11 orchestration docs in place
