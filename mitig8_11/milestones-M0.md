@@ -58,13 +58,16 @@ Milestone M0 focuses on establishing the foundation for the Mitig8 platform deve
 - Documented expected frontend and backend modules
 - Updated arch-status.md with comprehensive architecture audit
 
-### M0-T5: Baseline error categories
-**Status**: Pending
+### M0-T5: Baseline error categories ✓
+**Status**: Completed
 **Description**: Document baseline error categories from logs for core flows.
-**Planned Actions**:
-- Review logs for core flows
-- Document baseline error categories
-- Create error handling guidelines
+**Actions Taken**:
+- Analyzed CloudWatch logs from API v1 and Session Timeout Check Lambda functions
+- Identified critical MODULE_NOT_FOUND errors for shared database module and PostgreSQL client
+- Documented TLS/SSL security configuration issues
+- Categorized errors by core flow (Authentication, API Operations, Database Connectivity)
+- Created recommended actions for fixing deployment and security issues
+- Updated arch-status.md with comprehensive error categories documentation
 
 ### M0-T6: Archive M0 snapshot
 **Status**: Pending

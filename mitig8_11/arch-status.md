@@ -129,6 +129,46 @@ Mitig8_Client_WebApp/
 - RDS Proxy for database connectivity
 - All log groups have retention policies (1-30 days)
 
+## Baseline Error Categories
+
+### Module Dependencies
+- **MODULE_NOT_FOUND**: Cannot find module '../_shared/db' or 'pg'
+  - Impact: Critical - prevents Lambda functions from initializing
+  - Affected Functions: API v1, Session Timeout Check, and likely others
+  - Root Cause: Missing shared database module or PostgreSQL dependency in deployment package
+
+### TLS/SSL Configuration
+- **NODE_TLS_REJECT_UNAUTHORIZED**: TLS connections insecure due to disabled certificate verification
+  - Impact: Security risk - potential man-in-the-middle attacks
+  - Affected Functions: API v1
+  - Root Cause: Environment variable NODE_TLS_REJECT_UNAUTHORIZED set to '0'
+
+### Runtime Errors
+- **Runtime.ImportModuleError**: Module import failures during Lambda cold start
+  - Impact: Critical - prevents function execution
+  - Affected Functions: Session Timeout Check
+  - Root Cause: Same MODULE_NOT_FOUND issue during function initialization
+
+### Error Patterns by Core Flow
+
+#### Authentication & Session Management
+- Module dependency errors preventing session timeout checks
+- TLS configuration warnings in API endpoints
+
+#### API Operations
+- Database module dependency failures
+- TLS/SSL security configuration issues
+
+#### Database Connectivity
+- Missing PostgreSQL client library (pg)
+- Missing shared database connection module (_shared/db)
+
+### Recommended Actions
+1. Fix deployment pipeline to include all required dependencies
+2. Restore proper TLS certificate verification
+3. Ensure shared modules are properly packaged with Lambda functions
+4. Implement proper error handling and logging for database connections
+
 ## Milestone Progress
 
 - M0-T0: Git & GitHub bootstrap - ✓ Completed
