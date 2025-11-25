@@ -30,8 +30,11 @@ mitig8_client_webapp/
 - ❌ infrastructure/terraform/ folder (not yet created)
 
 ### AWS & Terraform
-- ❌ AWS CLI not yet verified
-- ❌ Terraform backend not yet verified
+- ✅ AWS CLI installed (v2.30.7)
+- ✅ AWS identity verified (Account: 879937386092)
+- ✅ Terraform installed (v1.5.7)
+- ❌ Terraform backend not yet verified (infrastructure/terraform/ not yet created)
+- ❌ S3 backend not yet verified (infrastructure/terraform/ not yet created)
 - ❌ Infrastructure not yet created
 
 ### Documentation

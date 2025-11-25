@@ -18,7 +18,7 @@ Milestone M0 focuses on setting up the foundational infrastructure for the Mitig
 - Pushed initial commit with Mitig8_11 orchestration bundle
 
 ### M0-T1: Create Mitig8_11 docs & confirm repo ✅
-**Status**: In Progress
+**Status**: Completed
 **Description**: Create Mitig8_11 docs and confirm repo structure without code changes.
 
 **Actions Completed**:
@@ -26,9 +26,15 @@ Milestone M0 focuses on setting up the foundational infrastructure for the Mitig
 - Created milestones-M0.md to track M0 progress
 - Confirmed mitig8_11/ folder exists with all required orchestration files
 
-### M0-T2: AWS CLI & Terraform connectivity
-**Status**: Pending
+### M0-T2: AWS CLI & Terraform connectivity ✅
+**Status**: Completed
 **Description**: Check AWS CLI, identity, S3 backend and Terraform backend (read-only).
+
+**Actions Completed**:
+- Verified AWS CLI installation (v2.30.7)
+- Verified AWS identity (Account: 879937386092)
+- Verified Terraform installation (v1.5.7)
+- Noted that Terraform backend and S3 backend cannot be verified yet as infrastructure/terraform/ directory does not exist (this is expected for a NEW repo)
 
 ### M0-T3: Local dev & Docker baseline
 **Status**: Pending
